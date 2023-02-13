@@ -1,0 +1,3 @@
+function managerCard(manager) {
+    
+}
