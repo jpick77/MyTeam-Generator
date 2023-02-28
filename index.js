@@ -6,8 +6,8 @@ const Manager = require('./lib/manager.js');
 const Engineer = require('./lib/engineer.js');
 const Intern = require('./lib/intern.js');
 const tempHTML = require('./src/tempHTML.js');
-const { createConnection } = require('net');
-const { type } = require('os');
+// const { createConnection } = require('net');
+// const { type } = require('os');
 
 let teamArray = [];
 
@@ -44,7 +44,7 @@ function addManager() {
 }
 
 
-function addtEngineer() {
+function addEngineer() {
     inquirer.promt([
         {type: 'input',
         message: "What is engineer's name?",
@@ -105,7 +105,7 @@ function addIntern() {
 }
 
 
-function addEmployee() {
+function anotherOne() {
     inquirer.prompt([
         {type: 'list',
         message: "Would you like to add another employee?",
@@ -118,7 +118,7 @@ function addEmployee() {
             }
 
             else if (answers.another === 'Engineer') {
-                addtEngineer();
+                addEngineer();
             }
 
             else if (answers.another === 'Intern') {
