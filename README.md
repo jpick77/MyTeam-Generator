@@ -19,16 +19,16 @@
   - [questions](#questions)
 
   ## Installation
-  The user is going to want to run the application in the command line or terminal. Using node index.js to run the app.
+  The user has to download inquirer in order to interact with the application.
 
   ## Usage
-  The user will open the command line or their local terminal and use the function node index.js
   https://drive.google.com/file/d/1haEYHlCCMxVXe-FIDxZtVIzYaCrAHtjU/view
+
   ## License
   MIT
 
   ## Test
-  I ran the test through the command line of my VS code 
+  I used npm jest in order to be able to run my tests correctly. 
 
   ## Contrabution
   My code is public, and will be available on my GitHub page for other developers to work on and give comments.
