@@ -39,9 +39,9 @@ function internCard(intern) {
 function generateHTML(teamArray) {
     let cardArray = [];
 
-    for (let i = 0; i < teamArray.lenght; i++) {
+    for (let i = 0; i < teamArray.length; i++) {
         const employee = teamArray[i];
-        constrole = employee.getRole();
+        const role = employee.getRole();
 
 
         if(role === 'Manager') {
@@ -49,20 +49,20 @@ function generateHTML(teamArray) {
             cardArray.push(manager);
         }
 
-        if(role === 'Engineer') {
+        else if(role === 'Engineer') {
             const engineer = engineerCard(employee);
             cardArray.push(engineer);
         }
 
 
-        if(role === 'Intern') {
+        else {
             const intern = internCard(employee);
             cardArray.push(intern);
         }
     }
 
-    const employeeCards = cardArray.join(''); // combining  cards code
-   
+    const employeeCards = cardArray.join('');
+    
     const teamCode = HTMLbase(employeeCards);
     return teamCode;
 
@@ -84,8 +84,12 @@ function HTMLbase(employeeCards) {
     <header class="header">MyTeam!!</header>
     <main>
         <div class="container card-group">
+            
             ${employeeCards}
+
         </div>
+
+
     </main>
     </body>
     </html>`
